@@ -6,7 +6,7 @@ public class ExpenseManager {
 
     ArrayList<Expense> expenses = new ArrayList<>();
 
-    public void addExpense(double amount, String description, String category, LocalDate date){
+    public void addExpense(double amount, String description, Category category, LocalDate date){
         Expense expense = new Expense(amount, description, category, date);
         expenses.add(expense);
     }
@@ -25,6 +25,7 @@ public class ExpenseManager {
         return total;
     }
 
+    //Menu 4 - Filtrar por mes
     public double calculateTotalByMonth(int month, int year){
         double total = 0;
 
@@ -34,5 +35,21 @@ public class ExpenseManager {
             }
         }
         return total;
+    }
+
+    //Filtro de categoria
+    public void listByCategory(Category category){
+        boolean found = false;
+
+        for (Expense e : expenses){
+            if (e.getCategory() == category){
+                System.out.println(e);
+                found = true;
+            }
+        }
+
+        if (!found){
+            System.out.println("Nenhum gasto encontrado nesta categoria.");
+        }
     }
 }

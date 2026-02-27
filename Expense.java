@@ -4,11 +4,11 @@ import java.time.format.DateTimeFormatter;
 public class Expense {
     private double amount; //valor
     private String description;
-    private String category;
+    private Category category; //enum
     private LocalDate date;
 
     // Constructor
-    public Expense(double amount, String description, String category, LocalDate date){
+    public Expense(double amount, String description, Category category, LocalDate date){
         this.amount = amount;
         this.description = description;
         this.category = category;
@@ -24,7 +24,7 @@ public class Expense {
         return description;
     }
 
-    public String getCategory() {
+    public Category getCategory() {
         return category;
     }
 
