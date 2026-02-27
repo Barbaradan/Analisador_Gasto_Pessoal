@@ -10,6 +10,8 @@ O sistema funciona, até agora, via console e permite que o usuário registre e 
 - Listar todos os gastos cadastrados
 - Calcular o total gasto
 - Cadastro de data utilizando `LocalDate`
+- Filtro de gastos por categoria
+- Categorização utilizando `Enum`
 
 ---
 
@@ -19,9 +21,12 @@ Durante o desenvolvimento, foram utilizados os seguintes conceitos:
 - Construtor para inicialização dos objetos
 - Separação de responsabilidades em classes
 - Uso de `ArrayList` para armazenamento dinâmico
+- Uso de `Enum` para padronização de categorias
+- Sobrescrita do método `toString()`
 - Uso de `LocalDate` para manipulação de datas
 - Uso de `DateTimeFormatter` para formatação
 - Estrutura de controle com `switch`
+- Estrutura de repetição para filtros
 
 ---
 
@@ -29,6 +34,7 @@ Durante o desenvolvimento, foram utilizados os seguintes conceitos:
 - `Main` → Responsável pela interação com o usuário
 - `Expense` → Representa um gasto
 - `ExpenseManager` → Gerencia a lista de gastos e cálculos
+- `Category` → Enum responsável pelas categorias de gastos
 
 ---
 
